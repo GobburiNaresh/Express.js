@@ -1,11 +1,13 @@
 //creation of products
 
 const express =require('express');
+const path = require('path');
+const rootDir = require('../helper/path');
 
 const router = express.Router();
 
 router.get('/add-product', (req, res, next) => {//only handle get request and return the form.
-    res.send('<form action="/admin/add-product" method="POST"><input type="text" name="title" placeholder="Product Title"><br><br><input type="text" name="Cost" placeholder="Product Cost"><br><br><button type="submit">Add Product</button></form>');
+    res.sendFile(path.join(rootDir, 'views', 'add-product.html'));
 });
   
 router.post('/add-product', (req, res, next) => {
