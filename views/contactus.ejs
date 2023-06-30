@@ -1,0 +1,43 @@
+<%- include('includes/head.ejs') %>
+<link rel="stylesheet" href="/css/conatct.css">
+</head>
+
+<body>
+    <%- include('includes/navigation.ejs', { path: '/' }) %>
+
+    <form action="contactus/success"  method = "POST">
+        <div class="form-group form-control">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" >
+        </div>
+        <div class="form-group form-control">
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" >
+        </div>
+        <div class="form-group form-control">
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" >
+        </div>
+        <div class="form-group form-control">
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" ></textarea>
+        </div>
+        <div class="form-group form-control">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" >
+        </div>
+        <div class="form-group form-control">
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" >
+        </div>
+        <div class="form-group form-control">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    
+
+    <%- include('includes/end.ejs') %>
+</body>
+
